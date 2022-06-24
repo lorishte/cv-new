@@ -15,7 +15,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Ubuntu:wght@400;500&display=swap");
 @keyframes moveInLeft {
   0% {
     opacity: 0;
