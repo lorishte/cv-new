@@ -1,0 +1,34 @@
+.project-card {
+
+	&__name {
+		display: inline-block;
+		transition: color ease-in-out .3s;
+		transition-delay: 100ms;
+	}
+
+	&__info {
+		display: inline-block;
+		margin-bottom: 2rem;
+		margin-right: 3rem;
+		font-weight: 400;
+		opacity: .4;
+		transition: opacity ease-in-out .2s;
+		transition-delay: 50ms;
+	}
+
+	&:hover {
+		cursor: default;
+	}
+
+	&:hover &__info{
+		opacity: 1;
+		color: $color-primary;
+	}
+
+	@include respond('phone') {
+		&__info{
+			opacity: 1;
+			color: $color-primary;
+		}
+	}
+}

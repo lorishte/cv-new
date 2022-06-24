@@ -1,0 +1,122 @@
+.navigation {
+	grid-column: 2 / 3;
+	padding-right: 1rem;
+	display: grid;
+	justify-content: end;
+
+
+
+	// Toggle Button
+	&__button {
+		display: none;
+
+		@include respond ('phone') {
+			display: block;
+		}
+	}
+
+
+	// NAVIGATION LIST
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(6, min-content);
+		text-decoration: none;
+		grid-gap: 1.5rem;
+
+		transition: all $transition-main;
+
+		@include respond('phone') {
+			position: absolute;
+			top: 6rem; //header height
+			right: 0;
+			transform: translateX(100%);
+
+			grid-template-columns: none;
+			grid-gap: 0;
+
+			width: 65vw;
+			background-color: $color-primary-dark;
+			box-shadow: $box-shadow-small;
+		}
+
+		&.open {
+			transform: translateX(0);
+		}
+	}
+
+	&__item {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		list-style: none;
+		transition: $transition-main;
+
+		@include respond('phone') {
+			border-bottom: 1px solid $color-primary-60;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		padding: .5rem 2rem;
+		font-size: 1.4rem;
+		width: 100%;
+		height: 100%;
+		transition: all $transition-main;
+
+		&:hover {
+			background-color: rgba($color-text-default, .2);
+			//color: $color-primary;
+		}
+
+		&.active {
+			background-color: $color-text-default;
+			color: $color-primary;
+		}
+
+		@include respond('phone') {
+			font-size: inherit;
+			padding: 1.5rem 0;
+		}
+	}
+}
+
+// NAVIGATION TOGGLE BUTTON
+
+#toggle-menu-btn {
+	display: none;
+
+	@include respond('phone') {
+		display: block;
+	}
+
+	&.clicked {
+
+		.toggle:first-of-type {
+			transform: rotate(45deg);
+			position: relative;
+			top: 5px;
+		}
+
+		.toggle:nth-of-type(2) {
+			opacity: 0;
+		}
+
+		.toggle:last-of-type {
+			transform: rotate(-45deg);
+			position: relative;
+			top: -5px;
+		}
+	}
+
+	.toggle {
+		display: block;
+		height: 2px;
+		width: 15px;
+		background-color: $color-text-default;
+		margin: 3px auto;
+
+		transition: all $transition-main;
+	}
+}

@@ -1,0 +1,87 @@
+
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+// Only radio buttons
+@keyframes scaleUpDown {
+    0% {
+        transform: translateY(.35rem) scale(1);
+    }
+
+    50% {
+        transform: translateY(.35rem) scale(1.2);
+    }
+
+    100% {
+        transform: translateY(.35rem) scale(1);
+    }
+}
+
+
+
+
+@keyframes draw {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes shrink {
+    100% {
+        width: 0;
+    }
+}
+
+
+@mixin draw-progress($value: 0, $delay: 0s) {
+    animation: draw 1s ease-in-out;
+    animation-delay: $delay;
+    width: $value;
+}
+
+@mixin shrink($value: 0) {
+    animation: shrink 1s ease-in-out;
+    animation-fill-mode: forwards;
+}

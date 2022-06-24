@@ -1,0 +1,41 @@
+// COLORS
+//$color-primary: #aba364;
+$color-primary: #a99a8b;
+$color-primary-60: rgba(169, 154, 139, 0.6);
+$color-primary-80: rgba(169, 154, 139, 0.8);
+
+$color-primary-dark: #837b73;
+
+$color-grey-light: #eee;
+$color-grey-dark-1: #777;
+$color-grey-dark-2: #424242;
+
+$color-black: #000;
+$color-text-default: $color-grey-dark-2;
+
+
+//FIXED HEIGHTS
+
+$header-height: 6rem;
+
+// MARGINS
+$content-margin-top: 10rem;
+
+
+// FONT SIZE
+$default-font-size: 1.6rem; // 14px
+
+
+//TRANSITION TIME
+$transition-main: .5s;
+$transition-fast: .2s;
+
+// BORDER_RADIUS
+$hasRoundCorners: true;
+$border-radius-tiny: .3rem;
+$border-radius-small: .7rem;
+$border-radius-big: 1rem;
+
+// SHADOWS
+$box-shadow-big: 0 2rem 3rem rgba($color-black, .08);
+$box-shadow-small: .05rem .1rem .5rem rgba($color-black, .15);
