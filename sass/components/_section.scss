@@ -12,5 +12,14 @@
 		grid-gap: 1.7rem;
 		border-radius: $border-radius-small;
 		margin-bottom: 3.5rem;
+
+		@include respond('phone') {
+			grid-gap: 1.2rem;
+		}
+
+		@include respond('phone-sm') {
+			grid-gap: .7rem;
+
+		}
 	}
 }

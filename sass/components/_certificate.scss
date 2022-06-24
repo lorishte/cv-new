@@ -1,5 +1,4 @@
 .certificate {
-	position: relative;
 	display: grid;
 	grid-gap: 2rem;
 	align-items: stretch;
@@ -10,11 +9,12 @@
 	@include respond('phone') {
 		background-color: $color-grey-light-bg;
 		border: none;
+		border-radius: $border-radius-tiny;
 	}
 
 	&:hover {
 		transform: translateY(-.65rem);
-		box-shadow: $box-shadow-small;
+		box-shadow: $box-shadow;
 	}
 
 	&:hover &__cta {

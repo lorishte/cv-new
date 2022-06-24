@@ -4,5 +4,14 @@
 	align-items: center;
 	grid-gap: 1rem;
 
+	@include respond('phone-sm') {
+		grid-template-columns: minmax(max-content, 40%) 1fr;
+		grid-gap: .5rem;
+	}
+
+	@include respond('phone-xs') {
+		grid-template-columns: 1fr 1fr;
+	}
+
 	&__name {}
 }
