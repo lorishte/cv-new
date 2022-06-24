@@ -1,0 +1,19 @@
+.info {
+	grid-column: 2/3;
+
+	@include respond('phone') {
+		grid-column: auto;
+	}
+}
+
+.certificates {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 5rem 1rem;
+	color: $color-grey-dark-2;
+}
+
+.projects {
+	display: grid;
+	grid-gap: 2rem;
+}

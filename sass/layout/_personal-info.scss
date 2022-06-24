@@ -1,0 +1,28 @@
+.personal-info {
+	position: fixed;
+	text-align: center;
+
+	&__image-container {
+		width: 19rem;
+		height: 19rem;
+		margin: auto;
+		border-radius: 50%;
+		overflow: hidden;
+		opacity: .7;
+	}
+
+	&__contacts {
+		margin-bottom: 2rem;
+
+		&--name {
+			font-size: 1.7rem;
+			margin: 2rem 0 1rem 0;
+			color: $color-primary;
+		}
+	}
+
+	@include respond('phone') {
+		position: relative;
+		margin-bottom: 6rem;
+	}
+}

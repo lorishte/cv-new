@@ -1,0 +1,8 @@
+.skill {
+	display: grid;
+	grid-template-columns: minmax(max-content, 30%) 1fr;
+	align-items: center;
+	grid-gap: 1rem;
+
+	&__name {}
+}

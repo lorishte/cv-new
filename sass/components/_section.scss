@@ -1,0 +1,16 @@
+.section {
+	margin-bottom: 11rem;
+
+	&:last-child {
+		height: calc(100vh - 10rem); // Content margin top
+		margin-bottom: 0;
+	}
+
+
+	&__subsection {
+		display: grid;
+		grid-gap: 1.7rem;
+		border-radius: $border-radius-small;
+		margin-bottom: 3.5rem;
+	}
+}
