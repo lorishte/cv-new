@@ -1,12 +1,24 @@
 .project-card {
 
+	display: grid;
+	grid-template-columns: 1fr max-content;
+	grid-gap: 1rem;
+	overflow-wrap: break-word;
+	align-items: start;
+
+
 	&__name {
 		display: inline-block;
 		transition: color ease-in-out .3s;
 		transition-delay: 100ms;
 	}
 
-	&__info {
+	&__text-divider {
+		margin: 0 1rem;
+		color: $color-primary;
+	}
+
+	&__discription {
 		display: inline-block;
 		margin-bottom: 2rem;
 		margin-right: 3rem;
@@ -22,13 +34,11 @@
 
 	&:hover &__info{
 		opacity: 1;
-		color: $color-primary;
 	}
 
 	@include respond('phone') {
 		&__info{
 			opacity: 1;
-			color: $color-primary;
 		}
 	}
 }

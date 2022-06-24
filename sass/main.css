@@ -250,27 +250,34 @@ p {
     text-align: right;
     padding-right: 1rem; }
 
-.project-card__name {
-  display: inline-block;
-  transition: color ease-in-out .3s;
-  transition-delay: 100ms; }
-.project-card__info {
-  display: inline-block;
-  margin-bottom: 2rem;
-  margin-right: 3rem;
-  font-weight: 400;
-  opacity: .4;
-  transition: opacity ease-in-out .2s;
-  transition-delay: 50ms; }
-.project-card:hover {
-  cursor: default; }
-.project-card:hover .project-card__info {
-  opacity: 1;
-  color: #a99a8b; }
-@media only screen and (max-width: 43.75em) {
-  .project-card__info {
-    opacity: 1;
-    color: #a99a8b; } }
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-gap: 1rem;
+  overflow-wrap: break-word;
+  align-items: start; }
+  .project-card__name {
+    display: inline-block;
+    transition: color ease-in-out .3s;
+    transition-delay: 100ms; }
+  .project-card__text-divider {
+    margin: 0 1rem;
+    color: #a99a8b; }
+  .project-card__discription {
+    display: inline-block;
+    margin-bottom: 2rem;
+    margin-right: 3rem;
+    font-weight: 400;
+    opacity: .4;
+    transition: opacity ease-in-out .2s;
+    transition-delay: 50ms; }
+  .project-card:hover {
+    cursor: default; }
+  .project-card:hover .project-card__info {
+    opacity: 1; }
+  @media only screen and (max-width: 43.75em) {
+    .project-card__info {
+      opacity: 1; } }
 
 .section {
   margin-bottom: 11rem; }
