@@ -364,6 +364,8 @@ body {
     @media only screen and (max-width: 43.75em) {
       .navigation__button {
         display: block; } }
+    .navigation__button:hover .toggle {
+      background-color: rgba(255, 255, 255, 0.85); }
     .navigation__button.clicked .toggle:first-of-type {
       transform: rotate(45deg);
       position: relative;
