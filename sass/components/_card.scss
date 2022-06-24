@@ -1,16 +1,18 @@
 .card {
-
 	padding: 2rem 0;
-	border-bottom: 1px solid $color-primary-60;
+	border-bottom: 1px solid $color-grey-light;
 
-	&__education {
-		color: $color-primary-80;
+	&__title {
+		color: $color-primary;
+	}
+
+	&__info {
+		font-size: $font-size-sm;
 	}
 
 	&__date {
-		font-size: 1.4rem;
+		font-size: $font-size-sm;
 	}
 
-	&__title {
-	}
+
 }

@@ -3,15 +3,49 @@
 	padding-right: 1rem;
 	display: grid;
 	justify-content: end;
+	align-self: end;
 
+	@include respond ('phone') {
+		align-self: center;
+	}
 
 
 	// Toggle Button
 	&__button {
 		display: none;
+		border: 1px solid $color-grey-light;
 
 		@include respond ('phone') {
 			display: block;
+		}
+
+		&.clicked {
+
+			.toggle:first-of-type {
+				transform: rotate(45deg);
+				position: relative;
+				top: 5px;
+			}
+
+			.toggle:nth-of-type(2) {
+				opacity: 0;
+			}
+
+			.toggle:last-of-type {
+				transform: rotate(-45deg);
+				position: relative;
+				top: -5px;
+			}
+		}
+
+		.toggle {
+			display: block;
+			height: 2px;
+			width: 15px;
+			background-color: $color-grey-medium;
+			margin: 3px auto;
+
+			transition: all $transition-main;
 		}
 	}
 
@@ -21,7 +55,7 @@
 		display: grid;
 		grid-template-columns: repeat(6, min-content);
 		text-decoration: none;
-		grid-gap: 1.5rem;
+		//grid-gap: 1.5rem;
 
 		transition: all $transition-main;
 
@@ -35,7 +69,7 @@
 			grid-gap: 0;
 
 			width: 65vw;
-			background-color: $color-primary-dark;
+			background-color: $color-white;
 			box-shadow: $box-shadow-small;
 		}
 
@@ -53,70 +87,32 @@
 		transition: $transition-main;
 
 		@include respond('phone') {
-			border-bottom: 1px solid $color-primary-60;
+			border-bottom: 1px solid $color-grey-light;
 		}
 	}
 
 	&__link {
 		display: inline-block;
 		padding: .5rem 2rem;
-		font-size: 1.4rem;
 		width: 100%;
 		height: 100%;
 		transition: all $transition-main;
+		text-transform: uppercase;
+		font-size: $font-size-sm;
 
 		&:hover {
-			background-color: rgba($color-text-default, .2);
-			//color: $color-primary;
+			background-color: $color-primary-60;
+			color: $color-white;
 		}
 
 		&.active {
-			background-color: $color-text-default;
-			color: $color-primary;
+			background-color: $color-primary;
+			color: $color-white;
 		}
 
 		@include respond('phone') {
 			font-size: inherit;
 			padding: 1.5rem 0;
 		}
-	}
-}
-
-// NAVIGATION TOGGLE BUTTON
-
-#toggle-menu-btn {
-	display: none;
-
-	@include respond('phone') {
-		display: block;
-	}
-
-	&.clicked {
-
-		.toggle:first-of-type {
-			transform: rotate(45deg);
-			position: relative;
-			top: 5px;
-		}
-
-		.toggle:nth-of-type(2) {
-			opacity: 0;
-		}
-
-		.toggle:last-of-type {
-			transform: rotate(-45deg);
-			position: relative;
-			top: -5px;
-		}
-	}
-
-	.toggle {
-		display: block;
-		height: 2px;
-		width: 15px;
-		background-color: $color-text-default;
-		margin: 3px auto;
-
-		transition: all $transition-main;
 	}
 }

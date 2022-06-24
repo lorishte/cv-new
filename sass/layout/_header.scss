@@ -6,12 +6,14 @@
 	height: 6rem;
 	z-index: 1000;
 
-	background-color: $color-primary;
-
 	display: grid;
 	grid-template-columns: min-content 1fr;
 	justify-content: end;
 	align-items: center;
+
+	background-color: $color-white;
+	border-bottom: 1px solid $color-grey-light;
+
 
 	.person {
 		display: none;

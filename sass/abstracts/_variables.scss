@@ -1,17 +1,19 @@
 // COLORS
 //$color-primary: #aba364;
-$color-primary: #a99a8b;
-$color-primary-60: rgba(169, 154, 139, 0.6);
-$color-primary-80: rgba(169, 154, 139, 0.8);
+$color-primary: #0DBB68;
+$color-primary-60: rgba(#0DBB68, 0.6);
+$color-primary-80: rgba(#0DBB68, 0.8);
 
-$color-primary-dark: #837b73;
+
+$color-white: #fff;
+$color-grey-light-bg: #f3f8f2;
 
 $color-grey-light: #eee;
-$color-grey-dark-1: #777;
-$color-grey-dark-2: #424242;
-
+$color-grey-medium: #ababab;
+$color-grey-dark: #868686;
 $color-black: #000;
-$color-text-default: $color-grey-dark-2;
+
+$color-text-default: $color-grey-dark;
 
 
 //FIXED HEIGHTS
@@ -23,7 +25,8 @@ $content-margin-top: 10rem;
 
 
 // FONT SIZE
-$default-font-size: 1.6rem; // 14px
+$font-size-lg: 1.7rem; // 17px
+$font-size-sm: 1.2rem; // 12px
 
 
 //TRANSITION TIME

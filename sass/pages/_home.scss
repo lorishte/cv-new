@@ -10,7 +10,14 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 5rem 1rem;
-	color: $color-grey-dark-2;
+
+	@include respond('phone') {
+		grid-gap: .8rem;
+	}
+
+	@include respond('phone-sm') {
+		grid-template-columns: none;
+	}
 }
 
 .projects {

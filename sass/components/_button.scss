@@ -8,6 +8,7 @@
     border-radius: $border-radius-small;
     transition: all .2s;
     position: relative;
+    font-size: $font-size-sm;
 
     //Change for the <button> element
     //border: none;
@@ -15,35 +16,18 @@
   }
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: $box-shadow-small;
+    background-color: darken($color-primary, 5%);
   }
 
   &:active,
   &:focus {
     outline: none;
-    transform: translateY(-1px);
-    box-shadow: $box-shadow-small;
   }
 
   &--primary {
-    color: $color-primary;
-    border: 1px solid $color-primary-60;
+    color: $color-white;
+    background-color: $color-primary;
   }
-
-  &--menu {
-    &:hover {
-      transform: translateY(0);
-      box-shadow: none;
-    }
-
-    &:active,
-    &:focus {
-      transform: translateY(0);
-      box-shadow: none;
-    }
-  }
-
 
   &.xs {
     padding: .5rem .8rem;
