@@ -3,17 +3,43 @@ const headerHeight = $('.header').height() + 70;
 const progressBars = $('.progress-bar__filler');
 const resPhone = 700;
 const menu = $('.navigation__list')
-let toggleMenuBtn = $('#toggle-menu-btn');
-const personalInfo = $('.person')
+const toggleMenuBtn = $('#toggle-menu-btn');
+const personalInfo = $('.person');
+let pageFirstLoad = true;
+
+
+// Create the observer
+const observer = new IntersectionObserver(entries => {
+
+    // Execute for each observed item
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            animateProgressBars();
+            return;
+        }
+
+        if (!pageFirstLoad) {
+            shrinkProgressBars();
+        }
+
+        // To avoid shrinking of progress bars right after first display
+        pageFirstLoad = false;
+    });
+});
+
+// Tell the observer which elements to track
+observer.observe(document.querySelector('#skills'));
+observer.observe(document.querySelector('#languages'));
 
 
 $(document).on('scroll', function () {
-    activeMenuOnScroll();
+    highlightActiveMenuOnScroll();
     showHidePerson();
 });
 
-// Toggle navigation -- Phone
 
+// Toggle navigation -- Phone
 toggleMenuBtn.click(function () {
 
     if (menu.hasClass('open')) {
@@ -27,7 +53,7 @@ toggleMenuBtn.click(function () {
 
 
 // Change menu color on scroll
-function activeMenuOnScroll() {
+function highlightActiveMenuOnScroll() {
 
     let scrollPos = $(document).scrollTop() + headerHeight;
 
@@ -46,19 +72,42 @@ function activeMenuOnScroll() {
 }
 
 
-// Add progress bar labels
-progressBars.each(function (i = 0) {
-    let fill_value = $(this).text();
-    i = i * 50
-    $(this).delay(i).animate(
-        {width: fill_value},
-        {duration: 1000},
-        {
-            specialEasing: {
-                width: "easeInOutBounce"
-            },
-        })
-});
+// Animate fill of progress bars
+function animateProgressBars() {
+    progressBars.each(function (delayTime = 0) {
+
+        // Get fill percent from html
+        let fill_value = $(this).text();
+
+        // Increase animation delay time for every progress bar
+        delayTime = delayTime * 50
+
+        $(this).delay(delayTime).animate(
+            {width: fill_value},
+            {duration: 1000},
+            {
+                specialEasing: {
+                    width: "easeInOutBounce"
+                },
+            })
+    });
+}
+
+
+// Shrink progress bar fill
+function shrinkProgressBars() {
+    progressBars.each(function () {
+
+        $(this).animate(
+            {width: 0},
+            {duration: 500},
+            {
+                specialEasing: {
+                    width: "easeInOutBounce"
+                },
+            })
+    });
+}
 
 
 // Smooth scroll
@@ -76,7 +125,7 @@ $('a[href*="#"]')
             $('html, body')
                 .animate({'scrollTop': scrollToPosition}, 1000);
 
-            $(document).on('scroll', activeMenuOnScroll);
+            $(document).on('scroll', highlightActiveMenuOnScroll);
 
             // Hide menu after click (mobile)
             if (window.innerWidth <= resPhone) {
