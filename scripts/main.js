@@ -79,17 +79,24 @@ function animateProgressBars() {
         // Get fill percent from html
         let fill_value = $(this).text();
 
+        console.log(delayTime)
+
         // Increase animation delay time for every progress bar
         delayTime = delayTime * 50
 
+        console.log(delayTime)
+        console.log(1000 + delayTime * 2)
+
         $(this).delay(delayTime).animate(
             {width: fill_value},
-            {duration: 1000},
+            {duration: 1000 + delayTime * 2},
             {
                 specialEasing: {
                     width: "easeInOutBounce"
                 },
             })
+
+
     });
 }
 
@@ -97,10 +104,9 @@ function animateProgressBars() {
 // Shrink progress bar fill
 function shrinkProgressBars() {
     progressBars.each(function () {
-
         $(this).animate(
             {width: 0},
-            {duration: 500},
+            {duration: 500 },
             {
                 specialEasing: {
                     width: "easeInOutBounce"
