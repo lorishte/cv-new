@@ -10,27 +10,23 @@ $color-grey-light-bg: #f3f8f2;
 
 $color-grey-light: #eee;
 $color-grey-medium: #ababab;
-$color-grey-dark: #868686;
+$color-grey-dark: #313131;
 $color-black: #000;
 
 $color-text-default: $color-grey-dark;
 
-
 //FIXED HEIGHTS
-
 $header-height: 6rem;
 
 // MARGINS
 $content-margin-top: 10rem;
 
-
 // FONT SIZE
-$font-size-lg: 1.7rem; // 17px
-$font-size-sm: 1.2rem; // 12px
-
+$font-size-lg: 1.8rem; // 18px
+$font-size-sm: 1.4rem; // 14px
 
 //TRANSITION TIME
-$transition-main: .5s;
+$transition-main: .35s;
 $transition-fast: .2s;
 
 // BORDER_RADIUS
@@ -40,4 +36,4 @@ $border-radius-small: .7rem;
 $border-radius-big: 1rem;
 
 // SHADOWS
-$box-shadow: 0.1rem 0.1rem 0.35rem rgba($color-black, .15);
+$box-shadow: -0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.15);

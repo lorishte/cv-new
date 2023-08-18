@@ -55,15 +55,18 @@ toggleMenuBtn.click(function () {
 // Change menu color on scroll
 function highlightActiveMenuOnScroll() {
 
-    let scrollPos = $(document).scrollTop() + headerHeight;
+    let scrollPos = $(document).scrollTop() + headerHeight +10;
 
     // Add class 'active' to pressed menu link, remove class 'active' from current active menu link
     menuLinks.each(function () {
         let currLink = $(this);
         let targetedSection = $(currLink.attr('href'));
 
-        if (Math.floor(targetedSection.position().top) <= scrollPos
-            && targetedSection.position().top + targetedSection.height() > scrollPos) {
+        console.log(targetedSection.position().top)
+        console.log(scrollPos)
+
+        if (Math.floor(targetedSection.position().top) < scrollPos
+            && targetedSection.position().top + targetedSection.height() >= scrollPos) {
             currLink.addClass('active');
         } else {
             currLink.removeClass('active');
@@ -79,13 +82,8 @@ function animateProgressBars() {
         // Get fill percent from html
         let fill_value = $(this).text();
 
-        console.log(delayTime)
-
         // Increase animation delay time for every progress bar
         delayTime = delayTime * 50
-
-        console.log(delayTime)
-        console.log(1000 + delayTime * 2)
 
         $(this).delay(delayTime).animate(
             {width: fill_value},
@@ -95,8 +93,6 @@ function animateProgressBars() {
                     width: "easeInOutBounce"
                 },
             })
-
-
     });
 }
 

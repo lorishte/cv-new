@@ -34,6 +34,7 @@
 		color: $color-primary;
 		transition: all $transition-fast;
 		margin-bottom: .8rem;
+		font-weight: 500;
 	}
 
 	&__name {
@@ -43,7 +44,7 @@
 
 		&--additional-info {
 			font-size: $font-size-sm;
-			opacity: .7;
+			//opacity: .7;
 			margin-top: .5rem;
 			display: block;
 		}

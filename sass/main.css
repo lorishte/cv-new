@@ -88,7 +88,7 @@ button {
   border: none; }
 
 a {
-  color: #868686; }
+  color: #313131; }
   a, a:link, a:visited {
     text-decoration: none; }
 
@@ -105,15 +105,14 @@ h1, h2, h3, h4, h5, h6 {
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #868686;
-  font-size: 1.4rem;
+  color: #313131;
+  font-size: 1.6rem;
   line-height: 1.7; }
 
 .heading-secondary {
   color: #0DBB68;
   text-transform: uppercase;
   font-size: 5rem;
-  font-weight: 300;
   margin-bottom: 3rem;
   transition: all .2s; }
   @media only screen and (max-width: 56.25em) {
@@ -134,10 +133,10 @@ body {
       font-size: 1.7rem; } }
 
 .text-bold {
-  font-weight: 400; }
+  font-weight: 500; }
 
 .text-accent-bold {
-  font-weight: 400;
+  font-weight: 500;
   color: #0DBB68; }
 
 .u-center-text {
@@ -186,7 +185,7 @@ body {
   border-radius: 0.7rem;
   transition: all .2s;
   position: relative;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   cursor: pointer; }
 .btn:hover {
   background-color: #0ba35b; }
@@ -211,9 +210,9 @@ body {
   .card__title {
     color: #0DBB68; }
   .card__info {
-    font-size: 1.2rem; }
+    font-size: 1.4rem; }
   .card__date {
-    font-size: 1.2rem; }
+    font-size: 1.4rem; }
 
 .skill {
   display: grid;
@@ -310,7 +309,7 @@ body {
       border-radius: 0.3rem; } }
   .certificate:hover {
     transform: translateY(-0.65rem);
-    box-shadow: 0.1rem 0.1rem 0.35rem rgba(0, 0, 0, 0.15); }
+    box-shadow: -0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.15); }
   .certificate:hover .certificate__cta {
     visibility: visible;
     opacity: 1; }
@@ -319,14 +318,14 @@ body {
   .certificate__school {
     color: #0DBB68;
     transition: all 0.2s;
-    margin-bottom: .8rem; }
+    margin-bottom: .8rem;
+    font-weight: 500; }
   .certificate__name {
     font-weight: 400;
     transition: all 0.2s;
     line-height: 1.3; }
     .certificate__name--additional-info {
-      font-size: 1.2rem;
-      opacity: .7;
+      font-size: 1.4rem;
       margin-top: .5rem;
       display: block; }
   .certificate__result {
@@ -382,12 +381,12 @@ body {
       width: 15px;
       background-color: #ababab;
       margin: 3px auto;
-      transition: all 0.5s; }
+      transition: all 0.35s; }
   .navigation__list {
     display: grid;
     grid-template-columns: repeat(6, min-content);
     text-decoration: none;
-    transition: all 0.5s; }
+    transition: all 0.35s; }
     @media only screen and (max-width: 43.75em) {
       .navigation__list {
         position: absolute;
@@ -398,7 +397,7 @@ body {
         grid-gap: 0;
         width: 65vw;
         background-color: #fff;
-        box-shadow: 0.1rem 0.1rem 0.35rem rgba(0, 0, 0, 0.15); } }
+        box-shadow: -0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.15); } }
     .navigation__list.open {
       transform: translateX(0); }
   .navigation__item {
@@ -407,7 +406,7 @@ body {
     height: 100%;
     text-align: center;
     list-style: none;
-    transition: 0.5s; }
+    transition: 0.35s; }
     @media only screen and (max-width: 43.75em) {
       .navigation__item {
         border-bottom: 1px solid #eee; } }
@@ -416,11 +415,11 @@ body {
     padding: .5rem 2rem;
     width: 100%;
     height: 100%;
-    transition: all 0.5s;
+    transition: all 0.35s;
     text-transform: uppercase;
-    font-size: 1.2rem; }
+    font-size: 1.4rem; }
     .navigation__link:hover {
-      background-color: rgba(13, 187, 104, 0.6);
+      background-color: rgba(13, 187, 104, 0.8);
       color: #fff; }
     .navigation__link.active {
       background-color: #0DBB68;
@@ -461,7 +460,7 @@ body {
         display: grid;
         grid-template-columns: min-content max-content;
         align-items: center;
-        transition: all 0.5s;
+        transition: all 0.35s;
         transform: translateY(-200%); } }
 
 .personal-info {
@@ -472,13 +471,12 @@ body {
     height: 19rem;
     margin: auto;
     border-radius: 50%;
-    overflow: hidden;
-    opacity: .85; }
+    overflow: hidden; }
   .personal-info__contacts {
     margin-bottom: 2rem;
-    font-size: 1.2rem; }
+    font-size: 1.4rem; }
     .personal-info__contacts--name {
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       margin: 2rem 0 1rem 0;
       color: #0DBB68; }
   @media only screen and (max-width: 43.75em) {
