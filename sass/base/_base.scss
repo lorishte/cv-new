@@ -5,6 +5,9 @@
 	padding: 0;
 	box-sizing: inherit;
 }
+:root {
+	--animate-duration: .8s;
+}
 
 html {
 	/* This defines 1rem

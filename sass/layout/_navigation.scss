@@ -13,7 +13,8 @@
 	// Toggle Button
 	&__button {
 		display: none;
-		border: 1px solid $color-grey-light;
+		//border: 1px solid $color-grey-light;
+		background-color: $color-primary;
 
 		@include respond ('phone') {
 			display: block;
@@ -46,7 +47,7 @@
 			display: block;
 			height: 2px;
 			width: 15px;
-			background-color: $color-grey-medium;
+			background-color: $color-white;
 			margin: 3px auto;
 
 			transition: all $transition-main;
@@ -59,8 +60,7 @@
 		display: grid;
 		grid-template-columns: repeat(6, min-content);
 		text-decoration: none;
-		//grid-gap: 1.5rem;
-
+		grid-gap: .2rem;
 		transition: all $transition-main;
 
 		@include respond('phone') {
@@ -103,8 +103,11 @@
 		transition: all $transition-main;
 		text-transform: uppercase;
 		font-size: $font-size-sm;
+		border-radius: $border-radius-tiny $border-radius-tiny 0 0;
+		line-height: 2;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: $color-primary-80;
 			color: $color-white;
 		}
@@ -117,6 +120,7 @@
 		@include respond('phone') {
 			font-size: inherit;
 			padding: 1.5rem 0;
+			border-radius: $border-radius-tiny;
 		}
 	}
 }

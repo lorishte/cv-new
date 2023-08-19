@@ -7,12 +7,24 @@
 	}
 
 	&__info {
-		font-size: $font-size-sm;
+		margin-top: 1rem;
 	}
 
 	&__date {
 		font-size: $font-size-sm;
+
+		&:after {
+			content: '/';
+			padding: 0 10px;
+			color: $color-primary;
+		}
+
+		@include respond(phone) {
+			display: block;
+		}
 	}
 
-
+	&__company {
+		font-weight: 500;
+	}
 }

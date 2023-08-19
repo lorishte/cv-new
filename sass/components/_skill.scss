@@ -13,5 +13,7 @@
 		grid-template-columns: 1fr 1fr;
 	}
 
-	&__name {}
+	&__name {
+		line-height: 1.3;
+	}
 }

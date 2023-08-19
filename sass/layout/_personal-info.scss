@@ -1,6 +1,7 @@
 .personal-info {
 	position: fixed;
 	text-align: center;
+	--animate-duration: 2s;
 
 	&__image-container {
 		width: 19rem;
@@ -8,6 +9,7 @@
 		margin: auto;
 		border-radius: 50%;
 		overflow: hidden;
+		--animate-duration: 2s;
 	}
 
 	&__contacts {
