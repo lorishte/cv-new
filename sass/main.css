@@ -62,7 +62,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   box-sizing: inherit; }
 
 :root {
-  --animate-duration: .8s; }
+  --animate-duration: 2s; }
 
 html {
   /* This defines 1rem
