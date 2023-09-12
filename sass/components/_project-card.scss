@@ -3,7 +3,9 @@
 	grid-template-columns: 1fr max-content;
 	grid-gap: 1rem;
 	overflow-wrap: break-word;
-	align-items: start;
+	align-items: center;
+	border-bottom: 1px solid $color-grey-light;
+	padding: 1.5rem 0;
 
 	&__info {
 
@@ -24,7 +26,7 @@
 	&__description {
 		display: inline-block;
 		margin-right: 3rem;
-		margin-bottom: 1rem;
+		//margin-bottom: 1rem;
 		font-weight: 400;
 		opacity: .65;
 		transition: opacity ease-in-out .2s;

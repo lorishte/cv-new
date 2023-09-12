@@ -268,7 +268,9 @@ body {
   grid-template-columns: 1fr max-content;
   grid-gap: 1rem;
   overflow-wrap: break-word;
-  align-items: start; }
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 1.5rem 0; }
   .project-card__name {
     display: inline-block;
     transition: color ease-in-out .3s;
@@ -280,7 +282,6 @@ body {
   .project-card__description {
     display: inline-block;
     margin-right: 3rem;
-    margin-bottom: 1rem;
     font-weight: 400;
     opacity: .65;
     transition: opacity ease-in-out .2s;
@@ -326,7 +327,7 @@ body {
   .certificate:hover .certificate__cta {
     visibility: visible;
     opacity: 1;
-    bottom: 1rem; }
+    bottom: 1.3rem; }
   .certificate__school {
     color: #0DBB68;
     transition: all 0.2s;
@@ -349,7 +350,7 @@ body {
   .certificate__cta {
     position: absolute;
     bottom: 0;
-    right: 1rem;
+    right: 1.3rem;
     visibility: hidden;
     opacity: 0;
     justify-self: end;
@@ -361,7 +362,8 @@ body {
       .certificate__cta {
         visibility: visible;
         opacity: 1;
-        justify-self: end; } }
+        justify-self: end;
+        bottom: 1.3rem; } }
 
 .navigation {
   grid-column: 2 / 3;
@@ -542,7 +544,6 @@ body {
       grid-template-columns: none; } }
 
 .projects {
-  display: grid;
-  grid-gap: 2rem; }
+  display: grid; }
 
 /*# sourceMappingURL=main.css.map */
