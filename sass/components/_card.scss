@@ -3,7 +3,7 @@
 	border-bottom: 1px solid $color-grey-light;
 
 	&__title {
-		color: $color-primary;
+		color: $color-primary-dark;
 	}
 
 	&__info {
@@ -12,6 +12,7 @@
 
 	&__date {
 		font-size: $font-size-sm;
+		color: $color-grey-medium;
 
 		&:after {
 			content: '/';

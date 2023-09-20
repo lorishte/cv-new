@@ -1,8 +1,10 @@
 // COLORS
 //$color-primary: #aba364;
-$color-primary: #0DBB68;
-$color-primary-60: rgba(#0DBB68, 0.6);
-$color-primary-80: rgba(#0DBB68, 0.8);
+//$color-primary: #0DBB68;
+$color-primary: #95cdb3;
+$color-primary-60: rgba($color-primary, 0.6);
+$color-primary-80: rgba($color-primary, 0.8);
+$color-primary-dark: darken($color-primary, 20);
 
 
 $color-white: #fff;
@@ -24,7 +26,7 @@ $content-margin-top: 10rem;
 
 // FONT SIZE
 $font-size-lg: 1.8rem; // 18px
-$font-size-sm: 1.4rem; // 14px
+$font-size-sm: 1.5rem; // 14px
 
 //TRANSITION TIME
 $transition-main: .35s;

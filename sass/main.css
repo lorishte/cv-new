@@ -16,6 +16,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Ubuntu:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@1;200;300;400;500;600;700;800;900&display=swap");
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -105,19 +106,25 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500; }
 
+@font-face {
+  font-family: "Noah";
+  src: url("fonts/Fontfabric - Noah Regular.otf"); }
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Noah', sans-serif;
   font-weight: 400;
   color: #313131;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   line-height: 1.7; }
+  @media only screen and (max-width: 43.75em) {
+    body {
+      line-height: 1.4; } }
 
 .heading-secondary {
-  color: #0DBB68;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-size: 5rem;
   margin-bottom: 3rem;
-  transition: all .2s; }
+  transition: all .2s;
+  font-weight: 800; }
   @media only screen and (max-width: 56.25em) {
     .heading-secondary {
       font-size: 4rem; } }
@@ -128,8 +135,7 @@ body {
 
 .heading-tertiary {
   font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: .5rem; }
   @media only screen and (max-width: 43.75em) {
     .heading-tertiary {
@@ -140,7 +146,7 @@ body {
 
 .text-accent-bold {
   font-weight: 500;
-  color: #0DBB68; }
+  color: #95cdb3; }
 
 .u-center-text {
   text-align: center !important; }
@@ -188,15 +194,15 @@ body {
   border-radius: 0.3rem;
   transition: all .2s;
   position: relative;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   cursor: pointer; }
 .btn:hover {
-  background-color: #0ba35b; }
+  background-color: #84c5a7; }
 .btn:active, .btn:focus {
   outline: none; }
 .btn--primary {
   color: #fff;
-  background-color: #0DBB68; }
+  background-color: #51ab81; }
 .btn.xs {
   padding: .5rem .8rem;
   font-size: 1rem;
@@ -211,15 +217,16 @@ body {
   padding: 2rem 0;
   border-bottom: 1px solid #eee; }
   .card__title {
-    color: #0DBB68; }
+    color: #51ab81; }
   .card__info {
     margin-top: 1rem; }
   .card__date {
-    font-size: 1.4rem; }
+    font-size: 1.5rem;
+    color: #ababab; }
     .card__date:after {
       content: '/';
       padding: 0 10px;
-      color: #0DBB68; }
+      color: #95cdb3; }
     @media only screen and (max-width: 43.75em) {
       .card__date {
         display: block; } }
@@ -255,7 +262,7 @@ body {
     align-self: stretch;
     width: 0;
     height: inherit;
-    background-color: #0DBB68;
+    background-color: #95cdb3;
     border-radius: 1rem;
     letter-spacing: .05rem;
     font-size: 0;
@@ -271,6 +278,9 @@ body {
   align-items: center;
   border-bottom: 1px solid #eee;
   padding: 1.5rem 0; }
+  .project-card__cta {
+    display: grid !important;
+    max-width: 3rem; }
   .project-card__name {
     display: inline-block;
     transition: color ease-in-out .3s;
@@ -278,7 +288,7 @@ body {
     overflow-wrap: break-word; }
   .project-card__text-divider {
     margin: 0 1rem;
-    color: #0DBB68; }
+    color: #95cdb3; }
   .project-card__description {
     display: inline-block;
     margin-right: 3rem;
@@ -292,10 +302,13 @@ body {
     cursor: default; }
   .project-card:hover .project-card__description {
     opacity: 1;
-    color: #0DBB68; }
+    color: #51ab81; }
 
 .section {
   margin-bottom: 11rem; }
+  @media only screen and (max-width: 43.75em) {
+    .section {
+      margin-bottom: 7rem; } }
   .section:last-child {
     height: calc(100vh - 10rem);
     margin-bottom: 0; }
@@ -318,7 +331,7 @@ body {
   align-items: stretch;
   padding: 1.3rem 2rem 1.8rem 2rem;
   transition: all 0.2s;
-  border-left: 1px solid rgba(13, 187, 104, 0.6); }
+  border-left: 1px solid rgba(149, 205, 179, 0.6); }
   @media only screen and (max-width: 43.75em) {
     .certificate {
       background-color: #f3f8f2;
@@ -329,7 +342,7 @@ body {
     opacity: 1;
     bottom: 1.3rem; }
   .certificate__school {
-    color: #0DBB68;
+    color: #51ab81;
     transition: all 0.2s;
     margin-bottom: .8rem;
     font-weight: 500; }
@@ -338,7 +351,8 @@ body {
     transition: all 0.2s;
     line-height: 1.3; }
     .certificate__name--additional-info {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
+      color: #ababab;
       margin-top: .5rem;
       display: block; }
   .certificate__result {
@@ -353,6 +367,8 @@ body {
     right: 1.3rem;
     visibility: hidden;
     opacity: 0;
+    display: grid;
+    max-width: 3rem;
     justify-self: end;
     text-align: center;
     border-radius: 0.3rem;
@@ -376,7 +392,7 @@ body {
       align-self: center; } }
   .navigation__button {
     display: none;
-    background-color: #0DBB68; }
+    background-color: #95cdb3; }
     @media only screen and (max-width: 43.75em) {
       .navigation__button {
         display: block; } }
@@ -414,7 +430,7 @@ body {
         grid-template-columns: none;
         grid-gap: 0;
         width: 65vw;
-        background-color: #fff;
+        background-color: #fbfbfb;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); } }
     .navigation__list.open {
       transform: translateX(0); }
@@ -434,15 +450,14 @@ body {
     width: 100%;
     height: 100%;
     transition: all 0.35s;
-    text-transform: uppercase;
-    font-size: 1.4rem;
+    text-transform: lowercase;
     border-radius: 0.3rem 0.3rem 0 0;
     line-height: 2; }
     .navigation__link:hover, .navigation__link:focus {
-      background-color: rgba(13, 187, 104, 0.8);
+      background-color: rgba(149, 205, 179, 0.8);
       color: #fff; }
     .navigation__link.active {
-      background-color: #0DBB68;
+      background-color: #95cdb3;
       color: #fff; }
     @media only screen and (max-width: 43.75em) {
       .navigation__link {
@@ -497,11 +512,11 @@ body {
     --animate-duration: 2s; }
   .personal-info__contacts {
     margin-bottom: 2rem;
-    font-size: 1.4rem; }
+    font-size: 1.5rem; }
     .personal-info__contacts--name {
       font-size: 1.8rem;
       margin: 2rem 0 1rem 0;
-      color: #0DBB68; }
+      color: #51ab81; }
   @media only screen and (max-width: 43.75em) {
     .personal-info {
       position: relative;

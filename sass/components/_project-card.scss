@@ -11,6 +11,11 @@
 
 	}
 
+	&__cta {
+		display: grid !important;
+		max-width: 3rem;
+	}
+
 	&__name {
 		display: inline-block;
 		transition: color ease-in-out .3s;
@@ -41,7 +46,7 @@
 
 	&:hover &__description{
 		opacity: 1;
-		color: $color-primary;
+		color: $color-primary-dark;
 	}
 
 	@include respond('phone') {

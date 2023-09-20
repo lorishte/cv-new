@@ -33,7 +33,7 @@
 
 
 	&__school {
-		color: $color-primary;
+		color: $color-primary-dark;
 		transition: all $transition-fast;
 		margin-bottom: .8rem;
 		font-weight: 500;
@@ -47,6 +47,7 @@
 		&--additional-info {
 			font-size: $font-size-sm;
 			//opacity: .7;
+			color: $color-grey-medium;
 			margin-top: .5rem;
 			display: block;
 		}
@@ -66,6 +67,8 @@
 		right: 1.3rem;
 		visibility: hidden;
 		opacity: 0;
+		display: grid;
+		max-width: 3rem;
 		justify-self: end;
 		text-align: center;
 		border-radius: $border-radius-tiny;

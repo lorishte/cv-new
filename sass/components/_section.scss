@@ -1,6 +1,10 @@
 .section {
 	margin-bottom: 11rem;
 
+	@include respond('phone') {
+		margin-bottom: 7rem;
+	}
+
 	&:last-child {
 		height: calc(100vh - 10rem); // Content margin top
 		margin-bottom: 0;
@@ -19,7 +23,6 @@
 
 		@include respond('phone-sm') {
 			grid-gap: .7rem;
-
 		}
 	}
 }

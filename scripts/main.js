@@ -41,7 +41,6 @@ $(document).on('scroll', function () {
 
 // Toggle navigation -- Phone
 toggleMenuBtn.click(function () {
-
     if (menu.hasClass('open')) {
         menu.removeClass('open')
         $(this).removeClass('clicked');
@@ -62,14 +61,12 @@ function highlightActiveMenuOnScroll() {
         let currLink = $(this);
         let targetedSection = $(currLink.attr('href'));
 
-        console.log(targetedSection.position().top)
-        console.log(scrollPos)
-
         if (Math.floor(targetedSection.position().top) < scrollPos
             && targetedSection.position().top + targetedSection.height() >= scrollPos) {
             currLink.addClass('active');
         } else {
             currLink.removeClass('active');
+            currLink.blur()
         }
     });
 }
