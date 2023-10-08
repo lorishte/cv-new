@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "animate.css": "^4.1.1",
-    "aos": "^2.3.4",
     "js-scroll-animations": "^0.9.0"
   }
 }
