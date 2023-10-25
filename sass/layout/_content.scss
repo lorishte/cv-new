@@ -20,5 +20,14 @@
 		grid-template-columns: auto;
 		grid-gap: 0;
 	}
+}
 
+#skills {
+	.skill {
+		&__name {
+			@include respond('phone-sm') {
+				font-size: 1.4rem;
+			}
+		}
+	}
 }
